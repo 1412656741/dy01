@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>桂工校庆</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/music.css" />
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		div {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		div {
+			margin: auto;
+		}
+
+		/*.navbar{
+				margin-top: 5px;
+				width: 1500px;
+				height: 30px;
+				background-color: #03a9f4;
+			}
+			
+			.nav li {
+				width: 150px;
+				font-size: 17px;
+				margin: 0;
+				padding: 0;
+			}
+			*/
+		div.circular {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			border-radius: 50%;
+			margin-top: 20px;
+			text-align: center;
+			line-height: 100px;
+			color: #fff;
+		}
+
+		.bonce-enter-active {
+			animation: Ami .5s;
+		}
+
+		.bounce-leave-active {
+			animation: Ami .5s;
+		}
+
+		@keyframes Ami {
+			0% {
+				transform: scale(0);
+				background: orange;
+			}
+
+			20% {
+				transform: scale(2);
+				background: orange;
+			}
+
+			50% {
+				transform: scale(3);
+				background: orange;
+			}
+
+			100% {
+				transform: scale(1);
+				background: orange;
+			}
+		}
+
+		/*@keyframes fang{
+			from{transform:scale(1);}
+			to{transform:scale(1.1);}
+		}*/
+		/*鼠标悬停效果hover*/
+
+		.diz:hover {
+			transform: scale(1.05);
+			/*animation: fang 0.75s linear;*/
+		}
+
+		@keyframes sun {
+			100% {
+				background-position: -400% 0;
+			}
+		}
+
+		#chan {
+			width: 1400px;
+			height: 100px;
+			margin-bottom: 100px;
+			/*background: #ff0;*/
+		}
+
+		#chan>a {
+			width: 200px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			font-size: 20px;
+			text-decoration: none;
+			background: linear-gradient(90deg, #03a9f4, #f441a5, #ffed3b, #03a9f4);
+			background-size: 400%;
+			margin: 0 auto;
+			color: white;
+			display: block;
+			border-radius: 30px;
+			animation: sun 8s infinite;
+		}
+	</style>
+
+</head>
+
+<body>
+	<!-- 添加navbar-fixed-top让导航条一直固定在顶部，不会因为滚动条改变而改变，navbar-inverse让导航条黑底展示 -->
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #56cfe1;" role="navigation">
+		　　<div class="container">　　
+			<!-- container让导航条居中container-fluid让导航条自适应 -->　　
+			　　　　<div class="navbar-header" style="margin: 0;padding: 0;">
+				　　　　　　
+				<!-- 响应式布局：当浏览器宽度小于某个值时导航栏折叠变成三道杠 -->
+				<button class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1" type="button">
+					<span class="sr-only navbar-left">切换导航</span>
+					<span class="icon-bar navbar-left"></span>
+					<span class="icon-bar navbar-left"></span>
+					<span class="icon-bar navbar-left"></span>
+				</button>
+				<!-- //导航栏左侧logo或者图标  -->
+				　　　　 　　
+				<!-- <a class="navbar-brand" href="http://www.baidu.com">浏览器博物馆</a> -->
+				<span class="navbar-brand">桂林理工65周年校庆</span>
+			</div>
+			　　　　
+			<!-- //导航条内容，为了响应式布局，点击三道杠弹出导航栏 -->
+			<div>
+				　　　　　　　　
+				<!-- //导航栏中的项目 -->
+				<ul class="nav navbar-nav collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<li><a href="a1.html">发展历程</a></li>
+					<li><a href="#">办学成果</a></li>
+					<li><a href="a2.html">美好校园</a></li>
+					<li><a href="#">关于桂工</a></li>
+				</ul>
+				<!-- 搜索框 -->
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+						<button type="submit" class="btn btn-default">搜索</button>
+					</div>
+				</form>
+				<!-- 登录注册 -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> 登录</a></li>
+					<li><a href="zhuce.html"><span class="glyphicon glyphicon-log-in"></span> 注册</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--鼠标放上去会停data-pause = "true"默认true
+			循环播放布尔型data-wrap="true"
+			设置自动变换世间data-interval
+		-->
+	<div id="slidershow" class="carousel slide" data-ride="carousel" data-interval=1500 data-pause="false"
+		data-wrap="true" style="margin-top: 5px; width: 1200px;height: 600px;margin-left: auto;margin-right: auto;">
+		<!--设置图片轮播的顺序-->
+		<ol class="carousel-indicators">
+			<li class="active" dat-target="#slidershow" data-slide-to="0"></li>
+			<li dat-target="#slidershow" data-slide-to="1"></li>
+		</ol>
+		<!--设置轮播的图片-->
+		<div class="carousel-inner">
+			<div class="item active">
+				<a href="##"><img style="width: 1200px;height: 600px;" src="img/gllg.png" / alt="cat1"></a>
+			</div>
+			<div class="item">
+				<a href="##"><img style="width: 1200px;height: 600px;" src="img/p7.jpg" / alt="cat2"></a>
+			</div>
+		</div>
+		<a href="#slidershow" class="left carousel-control" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a href="#slidershow" class="right carousel-control" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+	<div style="
+			width: 1500px;
+			height: 200px;
+			margin:10px auto 5px;
+			">
+		<div style="
+				width: 300px;
+				height: 70px;
+				margin:0px auto;
+				background-color: #5e60ce;
+				border-radius: 15px;
+				">
+			<p style="font-size: 40px;line-height: 70px;margin-left: 10px;"># 1956 - 2021 #</p>
+		</div>
+		<div style="
+				width: 610px;
+				height: 150px;
+				margin:0px auto;
+				background-color: #5390d9;
+				border-radius: 10px;
+				">
+			<h1 style="font-size: 80px;font-family:'微软雅黑';margin-left: 18px;margin-top:0px;line-height: 150px;">桂工65周年校庆
+			</h1>
+		</div>
+	</div>
+	<div style="height: 500px;width: 1400px;margin-top: 100px;">
+		<div style="margin-bottom: 20px;letter-spacing: 5px;">
+			<h2><b>桂林理工大学简介</b></h2>
+		</div>
+		<div class="pull-left" style="width: 700px;">
+			<img class="diz" src="img/xm.jpg" style="width: 650px;height:325px ;" />
+		</div>
+		<div class="pull-right" style="width: 700px;text-indent: 2em; line-height: 50px;word-break: normal;">
+			<p style="font-size: 25px;font-family:'宋体';">桂林理工大学是中央与地方共建、以广西壮族自治区管理为主的高校。
+				学校源于1956年原国家重工业部在广西组建的桂林地质学校， 历经五改归属、十易校名的发展历程，其中，1978年更名为桂林冶金地质学院， 1993年更名为桂林工学院，2009年正式更名为桂林理工大学。
+				中国工程院院士、国家杰出青年基金获得者、中华环保联合会副主席、 中国环境科学学会副理事长、中国可持续发展研究会副理事长、 国家环境咨询委员会委员曲久辉为学校名誉校长。
+			</p>
+		</div>
+	</div>
+	<div id="" style="width: 1400px;height: 600px;margin-top: 20px;">
+		<div id=""
+			style="width: 1000px;line-height: 100px;font-size: 30px;font-family: '宋体';margin: auto;text-align: center;">
+			<p style="color: #5e60ce;">不知不觉中<br /> 桂工迎来了65周年华诞
+				<br /> 在这里我们见证者桂工萌芽的春,绿荫的1夏,凋零的秋与枯寂的冬
+				<br /> 任何一种景色都历历在目
+			</p>
+		</div>
+	</div>
+	<!--<div id="app" style="margin-left: 100px;height: 300px;">
+			<button @click="show=!show" type="button">点击庆祝</button>
+			<transition name="bounce">
+				<div class="circular" v-if="show">
+					桂林理工大学生日快乐
+				</div>
+			</transition>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					show: true
+				}
+			})
+		</script>-->
+	<div id="chan">
+		<a href="JavaScript:;">庆祝一下</a>
+	</div>
+	<div id="bfqym">
+		<div id="zgc" class="pull-left">
+			<p><b>
+					七星叠翠，漓水流长，<br />
+					屏风紫气蔚霞光。<br />
+					英才竞秀，弦歌一堂，<br />
+					满园丹桂沁书香。<br />
+					厚德笃学，惟实励新，<br />
+					厚德笃学，惟实励新！<br />
+					冶金地质奠基业，<br />
+					桂工精神永传扬。<br />
+					冶金地质奠基业，<br />
+					桂工精神永传扬。<br /></b>
+			</p>
+		</div>
+		<div id="bfq" class="pull-left">
+			<div id="cp">
+				<!---webkit-animation:cpxc 8s linear infinite-->
+				<a href="#" style="margin: auto;"><img class="img-circle"
+						style="width: 350px;height: 350px;margin-top: 20px;" src="img/xm.jpg" /></a>
+			</div>
+			<div id="anniu" style="height: 250px;margin-top:50px;">
+				<audio preload="auto" loop="loop">
+					<source src="audio/gllgxg.mp3" type="audio/mp3">
+					</source>
+				</audio>
+				<button class="startBtn pull-left btn btn-default" onclick="start()" style="margin-left: 47px;"><span
+						class="glyphicon glyphicon-play "></span><br />播放</button>
+				<button class="pull-left btn btn-default" onclick="pause()" style="margin-left: 47px;"><span
+						class="glyphicon glyphicon-pause "></span><br />暂停</button>
+				<button class="pull-right btn btn-default" onclick="reStart()"
+					style="margin-left: 47px;margin-right: 47px;"><span
+						class="glyphicon glyphicon-refresh "></span><br />重放</button>
+			</div>
+		</div>
+		<div id="ygc" class="pull-right">
+			<p><b>
+					鸿雁凌空，风物放眼，<br />
+					鸿雁凌空，风物放眼！<br />
+					大道致远当自强，<br />
+					为学兴邦铸辉煌。<br />
+					大道致远当自强，<br />
+					为学兴邦铸辉煌。<br />
+					大道致远当自强，<br />
+					为学兴邦，<br />
+					为学兴邦铸辉煌。<br />
+					铸辉煌！<br /></b>
+			</p>
+		</div>
+	</div>
+	<div id="cht">
+		<a href="javascript:;">Happy birthday</a>
+	</div>
+	<script type="text/javascript">
+		//			var audio = document.querySelector("audio");
+
+		var audioDom = document.querySelector("audio");
+
+		function start() {
+			audioDom.play();
+		}
+
+		function pause() {
+			audioDom.pause();
+		}
+
+		function reStart() {
+			audioDom.currentTime = 0;
+			audioDom.play();
+		}
+	</script>
+	<div id="" class="container"
+		style="width: 1500px;height: 200px;background-color:#56cfe1; margin-top: 100px;margin-bottom: 20px;border-radius: 10px;">
+		<div id="" class="col-md-5" style="margin-top: 20px;vertical-align: middle;">
+			<img style="width: 65px;height: 75px;margin-right: 50px;" src="img/分校校徽.png" />
+			<img style="width: 75px;height: 75px;margin-right: 50px;" src="img/zx.png" />
+			<span style="margin-bottom: 50px;font-size: 24px;">桂林理工大学65周年校庆</span>
+		</div>
+		<div id="" class="col-md-7" style="text-align: center;font-size: 18px;">
+			<h3 style="margin-bottom: 50px;">联系我们</h3>
+			<p>桂林理工大学南宁分校"桂工校草"团队</p>
+			<p>联系方式:1234567890(微信同号)</p>
+			<p>QQ:12345678900</p>
+		</div>
+	</div>
+</body>
+
+</html>
