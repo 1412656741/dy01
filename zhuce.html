@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html{
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+				margin: 0;
+				padding: 0;
+				background: url(img/p4.jpg) no-repeat 0px 0px;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				-moz-background-size:100% 100%;
+			}
+			body{
+				display: flex;
+				align-items: center;
+				background: url(img/p7.jpg) ;
+				background-size: 100% 100%;
+				justify-content: center;
+				width: 100%;
+				height: 100%;
+			}
+			
+			#loginDv{
+				width: 37%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 300px;
+				background-color: rgba(0,0,0,0.5);
+				box-shadow:  0px 0px 17px rgba(52,56,66,0.8);
+				border-radius: 5px;
+			}
+		.button{
+			width: 80px;
+			height: 27px;
+			background-color: #5390d9;
+			color: aliceblue;
+			border-radius: 8px;
+			border: solid 1px #5390d9;
+		}
+		#form>p>input{
+			border-radius: 10px;
+			border: solid 1px #5390d9 ;
+			/*text-align: right;*/
+		}
+		#form>p{
+			text-align: right;
+		}
+		</style>
+	</head>
+	<body>
+			<div id="loginDv" style="text-align: center;">
+				<form id="form" action="" method="post">
+					<h1 style=" text-align: center;color: white;opacity: 0.8;margin-bottom: 50px;">用户注册</h1>
+					<p style="color: white;opacity: 0.8;">学号:&nbsp;&nbsp;<input type="text" style="color: #000000;" id="userName"  /><label id="name_trip"></label></p>
+					<p style="color: white;opacity: 0.8;">密码:&nbsp;&nbsp;<input type="password" style="color: #000000;" id="password" /><label id="password_trip"></label></p>
+					<p style="color: white;opacity: 0.8;">确认密码:&nbsp;&nbsp;<input type="password" style="color: #000000;" id="password" /><label id="password_trip"></label></p>
+					<div class="" style="text-align: center; margin-top: 30px;" >
+						<input type="submit"  class="button" value="注册"/>&nbsp;&nbsp;&nbsp;
+						<input type="reset" class="button" value="重置"/>
+					</div>
+				</form>
+			</div>		
+	</body>
+</html>
